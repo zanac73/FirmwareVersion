@@ -1,0 +1,41 @@
+
+##############################################
+# Syntax Coloring Map for ArduinoTrace library
+##############################################
+
+#######################################
+# Data types (KEYWORD1)
+#######################################
+
+FirmwareVersion        	    KEYWORD1
+
+# enum class Type
+None
+Development
+Debug
+Engineering
+ReleaseCandidate
+Release
+UnitTest
+IntegrationTest
+Test
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+serialPrint                 KEYWORD2
+timestamp			    	KEYWORD2
+version                     KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Structures (KEYWORD3)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
