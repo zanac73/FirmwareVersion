@@ -1,5 +1,5 @@
 /**
- * @file FirmwareVersion.ino
+ * @file DevVersion.ino
  * @author Cristiano Brudna (cristiano.brudna@gmail.com)
  * @date 2023-05-13
  */
@@ -28,7 +28,7 @@ void setup()
         delay(10);
     }
 
-    SerialStandard.println(F("Serial ready!"));
+    SerialStandard.println(F("-- Serial ready! --"));
 }
 
 void loop()

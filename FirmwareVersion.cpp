@@ -8,17 +8,16 @@
 #include "FirmwareVersion.h"
 
 const char *FirmwareVersion::c_TypeToString[] =
-{
-    "None",
-    "Development",
-    "Debug",
-    "Engineering",
-    "ReleaseCandidate",
-    "Release",
-    "UnitTest",
-    "IntegrationTest",
-    "Test"
-};
+    {
+        "None",
+        "Development",
+        "Debug",
+        "Engineering",
+        "ReleaseCandidate",
+        "Release",
+        "UnitTest",
+        "IntegrationTest",
+        "Test"};
 
 FirmwareVersion::FirmwareVersion(String name,
                                  unsigned int major,
@@ -27,6 +26,20 @@ FirmwareVersion::FirmwareVersion(String name,
     : m_name(name),
       m_major(major),
       m_minor(minor),
+      m_postfix(""),
+      m_type(type)
+{
+}
+
+FirmwareVersion::FirmwareVersion(String name,
+                                 unsigned int major,
+                                 unsigned int minor,
+                                 unsigned int patch,
+                                 Type type)
+    : m_name(name),
+      m_major(major),
+      m_minor(minor),
+      m_patch(patch),
       m_postfix(""),
       m_type(type)
 {
@@ -62,6 +75,10 @@ String FirmwareVersion::version()
     String version;
 
     version = String(m_major) + "." + String(m_minor) + String(m_postfix);
+    if (m_patch != sc_NotSet)
+    {
+        version += "." + String(m_patch);
+    }
 
     return version;
 }

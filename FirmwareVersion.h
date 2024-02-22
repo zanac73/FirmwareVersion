@@ -39,6 +39,12 @@ class FirmwareVersion
         FirmwareVersion(String name,
                         unsigned int major,
                         unsigned int minor,
+                        unsigned int patch,
+                        Type type = Type::None);
+
+        FirmwareVersion(String name,
+                        unsigned int major,
+                        unsigned int minor,
                         String postfix = "",
                         Type type = Type::None);
 
@@ -47,12 +53,14 @@ class FirmwareVersion
         void serialPrint();
 
     private:
+        static constexpr unsigned int sc_NotSet = __UINT16_MAX__;
         const char *c_DateTime = __TIME__ " " __DATE__;
         static const char * c_TypeToString[];
 
         String m_name;
         unsigned int m_major = 0;
         unsigned int m_minor = 0;
+        unsigned int m_patch = sc_NotSet;
         String m_postfix;
         Type m_type;
 
