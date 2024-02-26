@@ -1,5 +1,5 @@
 /**
- * @file FirmwareVersion.ino
+ * @file ReleaseVersion.ino
  * @author Cristiano Brudna (cristiano.brudna@gmail.com)
  * @date 2023-05-13
  */
@@ -35,12 +35,6 @@ void setup()
 
 void loop()
 {
-    if (showInfo and millis() >= 3000)
-    {
-        appVersion.serialPrint();
-        showInfo = false;
-    }
-
-    SerialStandard.println(".");
+    appVersion.serialPrint();
     delay(10000);
 }

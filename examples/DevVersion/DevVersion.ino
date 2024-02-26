@@ -17,8 +17,6 @@ FirmwareVersion appVersion(FIRMWARE_NAME,
                            FIRMWARE_VERSION_MINOR,
                            FIRMWARE_TYPE);
 
-bool showInfo = true;
-
 void setup()
 {
     SerialStandard.begin(115200);
@@ -28,17 +26,11 @@ void setup()
         delay(10);
     }
 
-    SerialStandard.println(F("-- Serial ready! --"));
+    SerialStandard.println(F("--- Serial ready! ---"));
 }
 
 void loop()
 {
-    if (showInfo and millis() >= 3000)
-    {
-        appVersion.serialPrint();
-        showInfo = false;
-    }
-
-    SerialStandard.println(".");
+    appVersion.serialPrint();
     delay(10000);
 }

@@ -24,8 +24,10 @@ Test
 # Methods and Functions (KEYWORD2)
 #######################################
 
+name                        KEYWORD2
 serialPrint                 KEYWORD2
 timestamp			    	KEYWORD2
+type                        KEYWORD2
 version                     KEYWORD2
 
 #######################################

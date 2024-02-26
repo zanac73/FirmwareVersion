@@ -48,8 +48,11 @@ class FirmwareVersion
                         String postfix = "",
                         Type type = Type::None);
 
+        String name();
         String timestamp();
+        Type type();
         String version();
+
         void serialPrint();
 
     private:
@@ -66,5 +69,4 @@ class FirmwareVersion
 
     private:
         String getTypeAsString();
-        String name();
 };

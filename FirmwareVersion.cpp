@@ -58,6 +58,11 @@ FirmwareVersion::FirmwareVersion(String name,
 {
 }
 
+FirmwareVersion::Type FirmwareVersion::type()
+{
+    return m_type;
+}
+
 String FirmwareVersion::getTypeAsString()
 {
     String type = c_TypeToString[static_cast<int>(m_type)];
