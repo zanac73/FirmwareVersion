@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        example: [examples/DevVersion/DevVersion.ino]
+        example: [examples/FirmwareVersion/FirmwareVersion.ino]
 
     steps:
       - uses: actions/checkout@v3
@@ -24,7 +24,11 @@ jobs:
           python-version: '3.11'
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
+      - name: Download external library
+        run: |
+          wget https://github.com/zanac73/FirmwareVersion/archive/master.zip -O /tmp/FirmwareVersion.zip
+          unzip /tmp/FirmwareVersion.zip -d /tmp        
       - name: Run PlatformIO
-        run: pio ci --lib="." --lib="/tmp/spi4teensy3-master" --board=uno --board=teensy31 --board=due
+        run: pio ci --lib="." --lib="/tmp/FirmwareVersion-master" --board=uno --board=teensy31 --board=due
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
