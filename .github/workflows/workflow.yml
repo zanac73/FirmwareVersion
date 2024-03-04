@@ -29,6 +29,6 @@ jobs:
           wget https://github.com/zanac73/FirmwareVersion/archive/master.zip -O /tmp/FirmwareVersion.zip
           unzip /tmp/FirmwareVersion.zip -d /tmp        
       - name: Run PlatformIO
-        run: pio ci --lib="." --lib="/tmp/FirmwareVersion-master" --board=uno --board=teensy31 --board=due
+        run: pio ci --lib="." --lib="/tmp/FirmwareVersion-main" --board=uno
         env:
           PLATFORMIO_CI_SRC: ${{ matrix.example }}
