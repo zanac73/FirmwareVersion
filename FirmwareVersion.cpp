@@ -75,16 +75,16 @@ void FirmwareVersion::serialPrint()
 {
     SerialStandard.println();
 
-    SerialStandard.print("FW Name: ");
+    SerialStandard.print(F("FW Name: "));
     SerialStandard.println(name());
 
-    SerialStandard.print("Version: ");
+    SerialStandard.print(F("Version: "));
     SerialStandard.println(version());
 
-    SerialStandard.print("Type: ");
+    SerialStandard.print(F("Type: "));
     SerialStandard.println(getTypeAsString());
 
-    SerialStandard.print("Build date: ");
+    SerialStandard.print(F("Build date: "));
     SerialStandard.println(timestamp());
 
     SerialStandard.println();

@@ -29,7 +29,7 @@ void setup()
         delay(10);
     }
 
-    SerialStandard.println("Serial ready!");
+    SerialStandard.println(F("Serial ready!"));
 }
 
 void loop()
