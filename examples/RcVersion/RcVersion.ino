@@ -1,5 +1,5 @@
 /**
- * @file FirmwareVersion.ino
+ * @file RcVersion.ino
  * @author Cristiano Brudna (cristiano.brudna@gmail.com)
  * @date 2023-05-13
  */
@@ -7,9 +7,9 @@
 #include <Arduino.h>
 #include <FirmwareVersion.h>
 
-#define FIRMWARE_NAME                   "Firmware Version Demo"
-#define FIRMWARE_VERSION_MAJOR          1
-#define FIRMWARE_VERSION_MINOR          23
+#define FIRMWARE_NAME                   "Firmware Version Example"
+#define FIRMWARE_VERSION_MAJOR          2
+#define FIRMWARE_VERSION_MINOR          0
 #define FIRMWARE_TYPE                   FirmwareVersion::Type::ReleaseCandidate
 
 FirmwareVersion appVersion(FIRMWARE_NAME,

@@ -7,20 +7,20 @@ with a predefined format.
 ## Examples ##
 
 
-### Example 1 ###
+### Example 1: Development Version ###
 
 ```
-FW Name: Firmware Version Demo
-Version: 1.23 
+FW Name: Firmware Version Example
+Version: 1.23
 Type: Development
-Build date: 18:49:48 Feb  6 2024
+Build date: 09:21:16 Feb  7 2024
 ```
 
-### Example 2 ###
+### Example 2: Release Candidate Version ###
 
 ```
-FW Name: Firmware Version Demo
-Version: 1.23-rc
+FW Name: Firmware Version Example
+Version: 2.0-rc
 Type: ReleaseCandidate
-Build date: 18:58:26 Feb  6 2024
+Build date: 09:22:57 Feb  7 2024
 ```

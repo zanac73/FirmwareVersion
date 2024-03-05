@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        example: [examples/FirmwareVersion/FirmwareVersion.ino]
+        example: [examples/DevVersion/DevVersion.ino, examples/RcVersion/RcVersion.ino]
 
     steps:
       - uses: actions/checkout@v3
